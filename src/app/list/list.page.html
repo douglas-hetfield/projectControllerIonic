@@ -4,24 +4,29 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>
-      List
+      Adicionar controle
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-item *ngFor="let item of items">
-      <ion-icon [name]="item.icon" slot="start"></ion-icon>
-      {{item.title}}
-      <div class="item-note" slot="end">
-        {{item.note}}
-      </div>
-    </ion-item>
-  </ion-list>
-  <!--
-    <div *ngIf="selectedItem" padding>
-      You navigated here from <b>{{selectedItem.title }}</b>
-    </div>
-  -->
+  <ion-card>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label position="stacked">Nome do controle<ion-text color="danger">*</ion-text></ion-label>
+          <ion-input required type="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="stacked">Conector(URL)<ion-text color="danger">*</ion-text></ion-label>
+          <ion-input required type="text"></ion-input>
+        </ion-item>
+
+        <section class="full-width">
+          <ion-button expand="full" color="tertiary">A full-width button</ion-button>
+        </section>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
